@@ -1,1 +1,25 @@
-{}
+{
+  "function": {
+    "HelloFunc": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "api": {
+    "HelloApi": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "HelloFunc",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
+    }
+  }
+}

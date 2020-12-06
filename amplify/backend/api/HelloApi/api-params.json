@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/hello",
+            "lambdaFunction": "HelloFunc",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/hello"
+        }
+    ],
+    "resourceName": "HelloApi",
+    "apiName": "HelloApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "HelloFunc"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-exampleamplifyapiwit-dev-210809-authRole",
+        "unAuthRoleName": "amplify-exampleamplifyapiwit-dev-210809-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "HelloFunc",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
