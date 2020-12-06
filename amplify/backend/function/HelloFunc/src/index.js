@@ -1,14 +1,13 @@
-
-
 exports.handler = async (event) => {
-    // TODO implement
+    await new Promise((resolve) => {
+      setTimeout(() => {
+        resolve();
+      }, 20000);
+    });
+  
     const response = {
-        statusCode: 200,
-    //  Uncomment below to enable CORS requests
-    //  headers: {
-    //      "Access-Control-Allow-Origin": "*"
-    //  }, 
-        body: JSON.stringify('Hello from Lambda!'),
+      statusCode: 200,
+      body: JSON.stringify("Hello from Step Functions with API Gateway!"),
     };
     return response;
-};
+  };

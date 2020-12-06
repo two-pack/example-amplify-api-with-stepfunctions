@@ -69,7 +69,7 @@
         "Timeout": "25",
         "Code": {
           "S3Bucket": "amplify-exampleamplifyapiwit-dev-210809-deployment",
-          "S3Key": "amplify-builds/HelloFunc-63763942554445566b61-build.zip"
+          "S3Key": "amplify-builds/HelloFunc-30695175437064743768-build.zip"
         }
       }
     },
