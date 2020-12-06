@@ -6,6 +6,19 @@
       "service": "Lambda"
     }
   },
+  "stepFunction": {
+    "HelloStep": {
+      "service": "Step Function",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "HelloFunc",
+          "attributes": ["Name", "Arn"]
+        }
+      ]
+    }
+  },
   "api": {
     "HelloApi": {
       "service": "API Gateway",
@@ -14,10 +27,7 @@
         {
           "category": "function",
           "resourceName": "HelloFunc",
-          "attributes": [
-            "Name",
-            "Arn"
-          ]
+          "attributes": ["Name", "Arn"]
         }
       ]
     }
