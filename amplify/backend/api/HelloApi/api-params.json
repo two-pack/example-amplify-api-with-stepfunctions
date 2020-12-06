@@ -24,11 +24,11 @@
     },
     "dependsOn": [
         {
-            "category": "function",
-            "resourceName": "HelloFunc",
+            "category": "stepFunction",
+            "resourceName": "HelloStep",
             "attributes": [
-                "Name",
-                "Arn"
+                "Arn",
+                "RoleName"
             ]
         }
     ]

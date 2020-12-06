@@ -25,9 +25,9 @@
       "providerPlugin": "awscloudformation",
       "dependsOn": [
         {
-          "category": "function",
-          "resourceName": "HelloFunc",
-          "attributes": ["Name", "Arn"]
+          "category": "stepFunction",
+          "resourceName": "HelloStep",
+          "attributes": ["Arn", "RoleName"]
         }
       ]
     }
